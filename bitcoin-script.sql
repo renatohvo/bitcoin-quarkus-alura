@@ -10,9 +10,9 @@ CREATE TABLE `Usuario` (
 	
 CREATE TABLE `Ordem` (
 	`id` bigint NOT NULL AUTO_INCREMENT,
-	`preco` float(53) NOT NULL,
+	`preco` float(6,2) NOT NULL,
 	`tipo` VARCHAR(255) NOT NULL,
-	`data` date NOT NULL,
+	`data` timestamp NOT NULL,
 	`status` VARCHAR(255) NOT NULL,
 	`user_id` bigint NOT NULL,
 	PRIMARY KEY (`id`),

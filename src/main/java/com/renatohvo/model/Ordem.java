@@ -3,7 +3,7 @@ package com.renatohvo.model;
 import jakarta.persistence.*;
 import lombok.Setter;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 public class Ordem {
@@ -16,7 +16,7 @@ public class Ordem {
     @Setter
     private String tipo;
     @Setter
-    private LocalDate data;
+    private LocalDateTime data;
     @Setter
     private String status;
     @Setter
