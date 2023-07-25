@@ -21,7 +21,7 @@ public class OrdemResource {
     @Transactional
     @Consumes(MediaType.APPLICATION_JSON)
     public void inserir(Ordem ordem) {
-        ordem.setData(LocalDateTime.now().now());
+        ordem.setData(LocalDateTime.now());
         ordem.setStatus("ENVIADA");
         ordemRepository.persist(ordem);
     }
