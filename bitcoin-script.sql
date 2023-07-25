@@ -17,3 +17,6 @@ CREATE TABLE `Ordem` (
 	`user_id` bigint NOT NULL,
 	PRIMARY KEY (`id`),
 	FOREIGN KEY (`user_id`) REFERENCES `Usuario` (`id`)) ENGINE=InnoDB;
+
+ALTER TABLE `bitcoin`.`Usuario` 
+ADD COLUMN `role` VARCHAR(55) NULL AFTER `password`;
