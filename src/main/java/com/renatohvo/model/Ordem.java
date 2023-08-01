@@ -12,12 +12,16 @@ public class Ordem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Getter
     @Setter
     private Double preco;
+    @Getter
     @Setter
     private String tipo;
+    @Getter
     @Setter
     private LocalDateTime data;
+    @Getter
     @Setter
     private String status;
     @Getter

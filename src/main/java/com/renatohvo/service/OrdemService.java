@@ -10,6 +10,8 @@ import jakarta.ws.rs.core.SecurityContext;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
+import java.util.List;
+
 @ApplicationScoped
 public class OrdemService {
 
@@ -27,4 +29,7 @@ public class OrdemService {
         ordemRepository.persist(ordem);
     }
 
+    public List<Ordem> listar() {
+        return ordemRepository.listAll();
+    }
 }
