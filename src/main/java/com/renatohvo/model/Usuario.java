@@ -6,6 +6,7 @@ import io.quarkus.security.jpa.Password;
 import io.quarkus.security.jpa.Roles;
 import io.quarkus.security.jpa.UserDefinition;
 import io.quarkus.security.jpa.Username;
+import jakarta.json.bind.annotation.JsonbTransient;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,6 +21,7 @@ public class Usuario extends PanacheEntityBase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Getter
     @Setter
     private String nome;
     @Setter
@@ -28,7 +30,6 @@ public class Usuario extends PanacheEntityBase {
     @Setter
     @Username
     private String username;
-    @Getter
     @Setter
     @Password
     private String password;
@@ -36,6 +37,11 @@ public class Usuario extends PanacheEntityBase {
     @Setter
     @Roles
     private String role;
+
+    @JsonbTransient
+    public String getPassword() {
+        return password;
+    }
 
     public static void inserir(Usuario usuario) {
         usuario.password = BcryptUtil.bcryptHash(usuario.password);
