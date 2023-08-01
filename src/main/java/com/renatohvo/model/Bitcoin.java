@@ -3,7 +3,7 @@ package com.renatohvo.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -15,6 +15,6 @@ public class Bitcoin {
 
     private String tipo;
 
-    private LocalDate data;
+    private LocalDateTime data;
 
 }
