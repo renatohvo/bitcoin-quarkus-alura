@@ -20,7 +20,6 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_PASSWORD=root
-      - MYSQL_USER=root
     volumes:
       - mysql.bitcoin:/var/lib/mysql
     ports:
