@@ -16,7 +16,7 @@ services:
       - mysql-bitcoin
 
   mysql-bitcoin: 
-    image: renatohvo/mysql-quarkus-db:latest
+    image: renatohvo/mysql-quarkus-db:8.0.34
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_PASSWORD=root
