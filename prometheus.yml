@@ -7,8 +7,8 @@ scrape_configs:
     scrape_interval: 5s
     static_configs:
       - targets: ['prometheus:9090']
-  - job_name: 'bitcoin'
+  - job_name: 'bitcoin-jvm'
     scrape_interval: 5s
     metrics_path: '/q/metrics'
     static_configs:
-      - targets: ['bitcoin_bitcoin-jvm_1:8080']
+      - targets: ['bitcoin-jvm:8080']
