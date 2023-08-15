@@ -1,5 +1,10 @@
 # bitcoin
 
+1. Run `docker-compose up`
+2. Open Swagger `http://localhost:8080/q/swagger-ui/`
+3. Open Prometheus `http://localhost:9090/`
+4. Open Grafana `http://localhost:3000/` and use `admin:admin` credentials and open `Connections` -> `Data Sources` -> Prometheus server URL: `http://prometheus:9090`
+
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
