@@ -4,11 +4,9 @@ global:
 
 scrape_configs:
   - job_name: 'prometheus'
-    scrape_interval: 5s
     static_configs:
       - targets: ['prometheus:9090']
   - job_name: 'bitcoin-jvm'
-    scrape_interval: 5s
     metrics_path: '/q/metrics'
     static_configs:
       - targets: ['bitcoin-jvm:8080']
