@@ -1,20 +1,13 @@
 global:
-  scrape_interval: 1m
-  evaluation_interval: 1m
+  scrape_interval: 15s
 
 scrape_configs:
   - job_name: 'prometheus'
-    scrape_interval: 1m
-    scrape_timeout: 30s
+    scrape_interval: 5s
     static_configs:
       - targets: ['prometheus:9090']
-    tls_config:
-      insecure_skip_verify: true
   - job_name: 'bitcoin-jvm'
-    scrape_interval: 1m
-    scrape_timeout: 30s
+    scrape_interval: 5s
     metrics_path: '/q/metrics'
     static_configs:
       - targets: ['bitcoin-jvm:8080']
-    tls_config:
-      insecure_skip_verify: true
